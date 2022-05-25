@@ -7,9 +7,6 @@ API_HASH = environ.get("API_HASH")
 BOT_TOKEN = environ.get("BOT_TOKEN")
 SESSION = environ.get("SESSION")
 TIME = int(environ.get("TIME"))
-#BOT_ID = []
-#for grp in environ.get("BOT_ID").split():
-#    BOT_ID.append(int(grp))
 GROUPS = []
 for grp in environ.get("GROUPS").split():
     GROUPS.append(int(grp))
@@ -52,9 +49,9 @@ async def delete(user, message):
        print(e)
        
 User.start()
-print("User Started!")
+print("User Started! Made with Love💖 By @VasuXD")
 Bot.start()
-print("Bot Started!")
+print("Bot Started! Made with Love💖 By @VasuXD")
 
 idle()
 
