@@ -7,12 +7,12 @@ API_HASH = environ.get("API_HASH")
 BOT_TOKEN = environ.get("BOT_TOKEN")
 SESSION = environ.get("SESSION")
 TIME = int(environ.get("TIME"))
-BOT_ID = []
-for grp in environ.get("BOT_ID").split():
+#BOT_ID = []
+#for grp in environ.get("BOT_ID").split():
 #    BOT_ID.append(int(grp))
-#GROUPS = []
-#for grp in environ.get("GROUPS").split():
-#    GROUPS.append(int(grp))
+GROUPS = []
+for grp in environ.get("GROUPS").split():
+    GROUPS.append(int(grp))
 ADMINS = []
 for usr in environ.get("ADMINS").split():
     ADMINS.append(int(usr))
@@ -40,14 +40,14 @@ Bot = Client(name="auto-delete",
 #async def start(bot, message):
 #    await message.reply(START_MSG.format(message.from_user.mention))
 
-@User.on_message(filters.chat(BOT_ID))
+@User.on_message(filters.chat(GROUP))
 async def delete(user, message):
     try:
        if message.from_user.id in ADMINS:
-          return
-       else:
           await asyncio.sleep(TIME)
           await Bot.delete_messages(message.chat.id, message.id)
+       else:
+          return
     except Exception as e:
        print(e)
        
