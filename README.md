@@ -1,4 +1,4 @@
-# AutoDelete-V2
+# Auto Msg Delete Bot
 Delete group messages after a specific time
 
 ## Variables
@@ -7,7 +7,7 @@ Delete group messages after a specific time
 3. `BOT_TOKEN` : Your telegram bot token from [@BotFather](https://t.me/BotFather)
 4. `SESSION` : Generate from here [![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-yellowgreen)](https://repl.it/@subinps/getStringName)
 5. `GROUPS` : ID of Groups (seperate by spaces)
-6. `ADMINS` : ID of Admins, messages from admins will not delete (seperate by spaces)
+6. `ADMINS` : ID of Admins, messages from admins will delete (seperate by spaces)
 7. `TIME` : Time in seconds
 
 ### Make sure:
@@ -20,8 +20,8 @@ Delete group messages after a specific time
 ## Deploy in your VPS
 
 ```sh
-git clone https://github.com/Arun-TG/AutoDelete-V2
-cd AutoDelete-V2
+git clone https://github.com/VasuXD/AutoDel-2
+cd AutoDel-2
 pip3 install -r requirements.txt
 # <Create Variables appropriately>
 python3 bot.py
@@ -29,4 +29,4 @@ python3 bot.py
 
 ### Credits
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
-- [Arun](https://t.me/Arun_TG)
+- [Vasu](https://t.me/VasuXD)
