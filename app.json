@@ -1,12 +1,12 @@
 {
-  "name": "AutoDelete-V2",
-  "description": "delete group messages after a specific time",
+  "name": "Auto Message Delete Bot by Vasu",
+  "description": "delete group messages of a user Or bot after a specific time",
   "keywords": [
     "telegram",
     "delete",
     "bot"
   ],
-  "repository": "https://github.com/Arun-TG/AutoDelete-V2",
+  "repository": "https://github.com/VasuXD/",
   "logo": "https://telegra.ph/file/8cd549b2beef98e83349e.jpg",
   "env": {
     "BOT_TOKEN": {
@@ -26,7 +26,7 @@
       "value": ""
     },
     "ADMINS":{
-      "description": "ID of admins",
+      "description": "Give ID of the users..whose message you want to delete (seperate by spaces)",
       "value": ""
     },
     "GROUPS":{
@@ -34,7 +34,7 @@
       "value": ""
     },
     "TIME": {
-      "description": "Time in seconds",
+      "description": "Time in seconds. after T second bot will delete message",
       "value": "300"
     }
   },
