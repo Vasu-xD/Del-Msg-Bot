@@ -5,7 +5,7 @@ from pyrogram import Client, filters, idle
 API_ID = int(environ.get("API_ID"))
 API_HASH = environ.get("API_HASH")
 BOT_TOKEN = environ.get("BOT_TOKEN")
-#SESSION = environ.get("SESSION")
+SESSION = environ.get("SESSION")
 TIME = int(environ.get("TIME"))
 BOT_ID = int(environ.get("BOT_ID"))
 #GROUPS = []
@@ -18,12 +18,12 @@ for usr in environ.get("ADMINS").split():
 #START_MSG = "<b>Hai {},\nI'm a simple bot to delete group messages after a specific time</b>"
 
 
-#User = Client(name="user-account",
-#              session_string=SESSION,
-#              api_id=API_ID,
-#              api_hash=API_HASH,
-#              workers=300
-#              )
+User = Client(name="user-account",
+              session_string=SESSION,
+              api_id=API_ID,
+              api_hash=API_HASH,
+              workers=300
+              )
 
 
 Bot = Client(name="auto-delete",
@@ -38,7 +38,7 @@ Bot = Client(name="auto-delete",
 #async def start(bot, message):
 #    await message.reply(START_MSG.format(message.from_user.mention))
 
-@Bot.on_message(filters.chat(BOT_ID))
+@User.on_message(filters.chat(BOT_ID))
 async def delete(user, message):
     try:
        if message.from_user.id in ADMINS:
@@ -49,14 +49,14 @@ async def delete(user, message):
     except Exception as e:
        print(e)
        
-#User.start()
-#print("User Started!")
+User.start()
+print("User Started!")
 Bot.start()
 print("Bot Started!")
 
 idle()
 
-#User.stop()
-#print("User Stopped!")
+User.stop()
+print("User Stopped!")
 Bot.stop()
 print("Bot Stopped!")
