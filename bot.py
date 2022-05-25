@@ -43,11 +43,11 @@ Bot = Client(name="auto-delete",
 @User.on_message(filters.chat(GROUPS))
 async def delete(user, message):
     try:
-       if message.from_user.id in ADMINS:
+       if message.from_user.id not in ADMINS:
+          return
+       else:
           await asyncio.sleep(TIME)
           await Bot.delete_messages(message.chat.id, message.id)
-       else:
-          return
     except Exception as e:
        print(e)
        
