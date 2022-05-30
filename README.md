@@ -1,5 +1,5 @@
-# Auto Msg Delete Bot
-Delete group messages after a specific time
+# Auto Message Delete Bot
+Delete group messages of a user/bot after a specific time
 
 ## Variables
 1. `API_ID` : Get from [my.telegram.org](https://my.telegram.org/)
@@ -14,19 +14,6 @@ Delete group messages after a specific time
 - Bot is admin in Groups with delete permission
 - Account used to create SESSION is a member in Groups
 
-## Deploy in Heroku
- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-## Deploy in your VPS
-
-```sh
-git clone https://github.com/VasuXD/AutoDel-2
-cd AutoDel-2
-pip3 install -r requirements.txt
-# <Create Variables appropriately>
-python3 bot.py
-```
-
 ### Credits
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
-- [Vasu](https://t.me/VasuXD)
+- [Vasu](https://github.com/VasuXD)
